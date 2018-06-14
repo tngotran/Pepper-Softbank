@@ -1,0 +1,26 @@
+topic: ~HelloWorld2()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+#u:(_*) nice to meet you
+
+u:(_*) $userIn = $1#get the user input and send to Python box
+
+#proposal: %tag $Musio_words #this code is originally from Android, but it does not work the same as in thie Choregraphe
+
+
+u:(e:Musio_words) $Musio_words#here is new way to make the Pepper say something, in Android, we use the bookmark and call the proposal. Here in Choregraphe, we use the even
+
+#every input has an event that being triggered every time that input changed, syntax is e:input_name
+
+#bookmark in Android environment is tag in Choregraphe
+
+#check the NAOqi-Developer guide/NAOqi APIs/NAOqi Interaction engienes/ALDialog/QiChat - TableofContent/ QiChat-Syntax/Variables -> check the note for more information about event
